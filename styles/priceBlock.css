@@ -1,0 +1,268 @@
+.price_block {
+  margin: 0;
+  padding: 100px 0 53px 0;
+  text-align: center;
+  background-color: #22252E;
+}
+.price_block__old_price {
+  margin-right: 8px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  color: #F24458;
+}
+.price_block__title {
+  margin: 0 0 60px 0;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 64px;
+  letter-spacing: -0.5px;
+  color: #FFFFFF;
+}
+.price_block__all_cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 51px;
+}
+.price_block__card {
+  width: 380px;
+  height: 340px;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1px solid #EBECED;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.price_block__card:not(:last-of-type) {
+  margin-right: 40px;
+}
+.price_block__card_title {
+  margin: 48px 0 16px 0;
+  padding-bottom: 12px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #323642;
+  border-bottom: 1px solid #EBECED;
+}
+.price_block__card_dollar {
+  position: absolute;
+  right: 266px;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 32px;
+  color: #22252E;
+}
+.price_block__card_price {
+  font-weight: 300;
+  font-size: 56px;
+  line-height: 66px;
+  letter-spacing: -1.5px;
+  color: #22252E;
+}
+.price_block__card_mo {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 32px;
+  color: #22252E;
+}
+.price_block__card_text {
+  margin: 0 0 30px 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #323642;
+}
+.price_block__card:hover {
+  transform: scale(1.1);
+  box-sizing: border-box;
+  border: 4px solid #4CB649;
+}
+.price_block__item {
+  position: relative;
+  margin: 0 0 27px 0;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #EBECED;
+}
+.price_block__sign_up__btn {
+  width: 205px;
+  height: 40px;
+  padding: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #4CB649;
+  border: 1px solid #4CB649;
+  background-color: transparent;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.price_block__sign_up__btn:hover {
+  color: #FFFFFF;
+  background-color: #4CB649;
+}
+.price_block__way_pay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 28px;
+  color: #FFFFFF;
+}
+.price_block__way_pay__title {
+  margin-right: 30px;
+}
+.price_block__way_pay__block, .price_block__way_pay__container {
+  display: flex;
+  align-items: center;
+}
+.price_block__way_pay__img {
+  margin-right: 32px;
+}
+.price_block__nav_pay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  list-style-type: none;
+}
+.price_block__nav_pay__link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #4CB649;
+}
+.price_block__nav_pay__link:first-child {
+  margin-right: 44px;
+}
+.price_block__nav_pay__link::after {
+  content: url(./images/shape.svg);
+  margin-left: 17px;
+}
+.price_block__nav_pay__link:hover {
+  color: #1bf510;
+}
+
+@media (min-width: 768px) and (max-width: 1150px) {
+  .price_block {
+    padding: 60px 33px 44px 33px;
+  }
+  .price_block__title {
+    margin: 0 0 40px;
+    font-size: 32px;
+    line-height: 44px;
+    text-align: center;
+    letter-spacing: normal;
+  }
+  .price_block__all_cards {
+    flex-direction: column;
+    margin-bottom: 36px;
+  }
+  .price_block__card {
+    margin: 0 0 40px;
+    border-radius: 4px;
+  }
+  .price_block__card:not(:last-of-type) {
+    margin-right: 0;
+  }
+  .price_block .price_block__way_pay {
+    flex-direction: column;
+  }
+  .price_block .price_block__way_pay__block, .price_block .price_block__way_pay__container {
+    display: block;
+  }
+  .price_block .price_block__way_pay__title {
+    margin: 0 0 21.5px;
+  }
+  .price_block .price_block__way_pay__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .price_block__nav_pay {
+    padding: 0;
+    flex-direction: column;
+  }
+  .price_block__nav_pay__item:first-child {
+    margin: 40px 0;
+  }
+  .price_block__nav_pay__link:first-child {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .price_block {
+    padding: 60px 30px 44px 30px;
+  }
+  .price_block__title {
+    width: 375px;
+    margin: 0 auto;
+    font-size: 32px;
+    line-height: 44px;
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  .price_block__all_cards {
+    flex-direction: column;
+    width: 315px;
+    margin: 0 auto;
+  }
+  .price_block__card {
+    margin: 0 0 20px;
+    width: 100%;
+    height: 340px;
+    border-radius: 4px;
+  }
+  .price_block__card:hover {
+    width: 100%;
+    height: 340px;
+    transform: scale(1);
+    border: 4px solid #FF8D00;
+    box-sizing: border-box;
+  }
+  .price_block__card:not(:last-of-type) {
+    margin-right: 0;
+  }
+  .price_block__card_title {
+    margin: 48px 0 12px 0;
+  }
+  .price_block .price_block__way_pay {
+    flex-direction: column;
+  }
+  .price_block .price_block__way_pay__block, .price_block .price_block__way_pay__container {
+    display: block;
+  }
+  .price_block .price_block__way_pay__title {
+    margin: 0 0 21.5px;
+  }
+  .price_block .price_block__way_pay__container {
+    display: flex;
+  }
+  .price_block .price_block__way_pay__img:nth-child(2) {
+    margin-right: 37px;
+  }
+  .price_block .price_block__way_pay__img:nth-child(2) :nth-child(3) {
+    margin: 0;
+  }
+  .price_block__nav_pay {
+    padding: 0;
+    flex-direction: column;
+  }
+  .price_block__nav_pay__item:first-child {
+    margin: 42.5px 0 38px 0;
+  }
+  .price_block__nav_pay__link:first-child {
+    margin: 0;
+  }
+}/*# sourceMappingURL=priceBlock.css.map */

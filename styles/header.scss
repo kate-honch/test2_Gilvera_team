@@ -1,0 +1,332 @@
+.header {
+  &_warning {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 0;
+    color: wheat;
+    background-color: #22252E;
+
+    &__block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__warn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 32px;
+      font-weight: 700;
+      color: #FF8D00;
+    }
+
+    &__text{
+      margin-right: 32px;
+      color: #889099;
+    }
+
+    &__learn_btn {
+      border: none;
+      color: #FFFFFF;
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    &__close_btn {
+      position: absolute;
+      right: 21px;
+      bottom: 13px;
+      width: 24px;
+      height: 24px;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
+
+  &_menu {
+    max-width: 1200px;
+    min-width: 900px;
+    margin: 0 auto;
+    padding: 52px 60px 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    &__modal_window {
+      display: none;
+    }
+
+    &__btn {
+      display: none;
+    }
+
+    &__name {
+      font-family: 'Inter';
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+      color: #000000;
+    }
+
+    &__item {
+      margin-right: 31px;
+      padding-bottom:9px;
+      box-sizing: border-box;
+
+      &_arrow {
+        &:after {
+          content: url("./images/arrow.svg");
+          margin-left:8px;
+        }
+
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+      }
+      
+    }
+
+    &__list {
+      display: flex;
+      padding: 0;
+      margin-bottom: 6px;
+      list-style-type: none;
+      cursor: pointer;
+
+      > li {
+        padding-bottom: 9px;
+        // box-sizing: border-box;
+
+        &:hover {
+          border-bottom: 3px solid #4CB649;
+          box-sizing: border-box;
+        }
+      }
+    }
+  
+    &__log_in__btn {
+      width: 90px;
+      height: 40px;
+      margin-right: 10px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      text-align: center;
+      letter-spacing: 0.8px;
+      color: #4CB649;
+      border: 1px solid #4CB649;
+      background-color: transparent;
+      border-radius: 30px;
+      cursor: pointer;
+
+      &:hover {
+        color: #296827;
+        background-color: white;
+      }
+    }
+
+    &__get_start__btn {
+      width: 160px;
+      height: 40px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      text-align: center;
+      letter-spacing: 0.8px;
+      color: #FFFFFF;
+      border: none;
+      background: linear-gradient(0deg, #4CB649 0%, #5DDF5A 100%);
+      border-radius: 30px;
+      cursor: pointer;
+
+      &:hover {
+        background: #3e8f3c ;
+      }
+    }
+  }
+}
+
+@media (min-width:768px) and (max-width:1150px) {
+  .header {
+    width: 100%;
+    box-sizing: border-box;
+
+    &_warning {
+      padding: 10px 10px 13px 20px;
+      justify-content: space-around;
+
+      &__block {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &__warn,
+      &__learn_btn {
+        margin: 0 0 9px;
+      }
+      
+      &__text {
+        margin: 0;
+        order: 3;
+      }
+
+      &__close_btn {
+        top: 20px;
+        right: 15px;
+        bottom: 39px;
+      }
+    }
+
+    &_menu {
+      position: relative;
+      padding: 20px;
+      min-width: auto;
+
+      &__list,
+      &__log_in__btn {
+        display: none;
+      }
+
+      &__modal_window.active {
+        display: block;
+      }
+  
+      &__modal_window {
+        display: none;
+        position: absolute;
+        left: 10px;
+        top: 56px;
+        z-index: 3;
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        box-shadow: 10px 5px 5px #bcc2dd;
+  
+        
+        &__list {
+          margin: 0;
+          padding: 15px 10px;
+          list-style-type: none;
+          cursor: pointer;
+        }
+
+        &_item {
+          padding: 8px 0 ;
+          
+          &:not(:last-child){
+            border-bottom: 1px solid rgb(152, 173, 233);
+          }
+          
+          &:hover {
+            background-color: #ebefff;
+          }
+        }
+      }
+
+      &__btn {
+        display: block;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+      }
+
+      &__get_start__btn {
+        width: 126px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:768px) {
+  .header {
+    width: 375px;
+    box-sizing: border-box;
+
+    &_menu__modal_window.active {
+      display: block;
+    }
+
+    &_menu__modal_window {
+      display: none;
+      position: absolute;
+      left: 8px;
+      top: 155px;
+      z-index: 3;
+      background-color: #FFFFFF;
+      border-radius: 10px;
+      box-shadow: 10px 5px 5px #bcc2dd;
+
+      &__list {
+        margin: 0;
+        padding: 15px 10px;
+        list-style-type: none;
+        cursor: pointer;
+      }
+
+      &_item {
+        padding: 8px 0 ;
+        
+        &:not(:last-child){
+          border-bottom: 1px solid rgb(152, 173, 233);
+        }
+        
+        &:hover {
+          background-color: #ebefff;
+        }
+      }
+    }
+
+    &_warning {
+      padding: 14px 15px 13px 20px;
+      justify-content: space-around;
+      font-size: 12px;
+      
+      &__warn,
+      &__learn_btn {
+        margin-bottom: 9px;
+      }
+
+      &__text {
+        margin: 0 0 9px;
+        order: 3;
+      }
+
+      &__close_btn {
+        top: 15px;
+        right: 15px;
+        bottom: 39px;
+      }
+    
+    }
+
+    &_warning__block {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &_menu {
+      min-width: auto;
+      padding: 0;
+      margin: 25px 10px 30px 12px;
+      &__list,
+      &__log_in__btn {
+        display: none;
+      }
+
+      &__btn {
+        display: block;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+      }
+
+      &__get_start__btn {
+        width: 126px;
+      }
+    }
+  }
+}
