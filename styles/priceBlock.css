@@ -170,11 +170,15 @@
     margin-bottom: 36px;
   }
   .price_block__card {
+    width: 500px;
     margin: 0 0 40px;
     border-radius: 4px;
   }
   .price_block__card:not(:last-of-type) {
     margin-right: 0;
+  }
+  .price_block__card_dollar {
+    right: 325px;
   }
   .price_block .price_block__way_pay {
     flex-direction: column;
@@ -206,7 +210,7 @@
     padding: 60px 30px 44px 30px;
   }
   .price_block__title {
-    width: 375px;
+    width: auto;
     margin: 0 auto;
     font-size: 32px;
     line-height: 44px;
@@ -237,10 +241,13 @@
   .price_block__card_title {
     margin: 48px 0 12px 0;
   }
+  .price_block__card_dollar {
+    right: 245px;
+  }
   .price_block .price_block__way_pay {
     flex-direction: column;
   }
-  .price_block .price_block__way_pay__block, .price_block .price_block__way_pay__container {
+  .price_block .price_block__way_pay__block {
     display: block;
   }
   .price_block .price_block__way_pay__title {
@@ -248,11 +255,9 @@
   }
   .price_block .price_block__way_pay__container {
     display: flex;
+    justify-content: space-between;
   }
-  .price_block .price_block__way_pay__img:nth-child(2) {
-    margin-right: 37px;
-  }
-  .price_block .price_block__way_pay__img:nth-child(2) :nth-child(3) {
+  .price_block .price_block__way_pay__img {
     margin: 0;
   }
   .price_block__nav_pay {
